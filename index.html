@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // (async () => {
+        // window.eval (await (await fetch("./a.out.js")).text());
+        // })();
+
+        // loadScript().catch(error => console.error('Error loading script:', error));
+        // eval (await (await fetch("./a.out.js")).text());
+    </script>
+    <!-- <script src="./arkanoid.js" defer></script> -->
+    <script src="./game.js" type="module" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tetris</title>
+</head>
+
+<body>
+    <div class="controls grid fixed">
+            <div onclick="document.dispatchEvent(new KeyboardEvent('keydown', {code: this.innerText}))" id="Start">Enter</div>
+            <div onclick="document.dispatchEvent(new KeyboardEvent('keydown', {code: this.innerText}))" id="Pause">KeyP</div>
+            <div onclick="document.dispatchEvent(new KeyboardEvent('keydown', {code: this.innerText}))" id="Left">ArrowLeft</div>
+            <div onclick="document.dispatchEvent(new KeyboardEvent('keydown', {code: this.innerText}))" id="Up">ArrowUp</div>
+            <div onclick="document.dispatchEvent(new KeyboardEvent('keydown', {code: this.innerText}))" id="Down">ArrowDown</div>
+            <div onclick="document.dispatchEvent(new KeyboardEvent('keydown', {code: this.innerText}))" id="Right">ArrowRight</div>
+            <div onclick="document.dispatchEvent(new KeyboardEvent('keydown', {code: this.innerText}))" id="Terminate">KeyQ</div>
+            <div onclick="document.dispatchEvent(new KeyboardEvent('keydown', {code: this.innerText}))" id="Space">Space</div>
+    </div>
+
+    <header>
+        <h1>BrickGame web_gui</h1>
+    </header>
+    <div id="tetris">
+        <div id="field"></div>
+        <div id="side-panel dashboard-text">
+            <div id="next"></div>
+            <p>score: <span id="score"></span></p>
+            <p>high_score: <span id="high_score"></span></p>
+            <p>level: <span id="level"></span></p>
+            <p>speed: <span id="speed"></span></p>
+            <p>pause: <span id="pause"></span></p>
+        </div>
+    </div>
+</body>
+
+</html>
