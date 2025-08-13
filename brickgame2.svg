@@ -1,0 +1,34 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="300" height="300" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="10" cy="10" r="1" fill="red" />
+  <rect x="0" y="0" width="1" height="1" fill="blue" />
+  <rect x="9" y="0" width="1" height="1" fill="blue" />
+  <rect x="19" y="0" width="1" height="1" fill="blue" />
+
+  <script type="text/javascript"><![CDATA[
+    var KEY = { w:87, a:65, s:83, d:68 };
+    var moveSpeed = 1;
+    var circle = document.getElementsByTagName("rect")[0];
+    var x = circle.getAttribute('cx')*1,
+        y = circle.getAttribute('cy')*1;
+    document.documentElement.addEventListener('keydown',function(evt){
+      switch (evt.keyCode){
+        case KEY.w:
+          circle.setAttribute('y',y-=moveSpeed);
+          // Alternatively:
+          // circle.y.baseVal.value = (y-=moveSpeed);
+        break;
+        case KEY.s:
+          circle.setAttribute('y',y+=moveSpeed);
+        break;
+        case KEY.a:
+          circle.setAttribute('x',x-=moveSpeed);
+        break;
+        case KEY.d:
+          circle.setAttribute('x',x+=moveSpeed);
+        break;
+      }
+    },false);
+  ]]></script>
+</svg>
