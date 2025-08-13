@@ -1,6 +1,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="300" height="300" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <circle cx="10" cy="10" r="1" fill="red" />
   <rect x="0" y="0" width="1" height="1" fill="blue" />
   <rect x="9" y="0" width="1" height="1" fill="blue" />
@@ -31,4 +31,5 @@
       }
     },false);
   ]]></script>
+
 </svg>
